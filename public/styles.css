@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+body {
+  text-align: center;
+  font-family: "VT323", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 19px;
+}
+
+.game-wrapper {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  margin-bottom: 2rem;
+}
+
+.field {
+  flex-grow: 0;
+  background-color: black;
+}
+
+.container-stats {
+  display: flex;
+  position: absolute;
+  gap: 8rem;
+  margin-bottom: 2rem;
+  top: 2rem;
+  z-index: 2;
+}
+
+.gamefield {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  background-color: gray;
+  outline: auto;
+}
+
+.wall {
+  background-color: black;
+}
+
+.box {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.bomberman,
+.enemy,
+.bomb {
+  position: absolute;
+  background-size: 100% 100%;
+  z-index: 4;
+}
+
+.bomberman {
+  background-size: 420px 240px;
+  z-index: 5;
+}
+
+.enemy {
+  background-size: 180px 240px;
+  z-index: 6;
+}
+
+.bomb {
+  background-image: url("./assets/images/bomb.png");
+}
+
+.stats__column {
+  width: 30rem;
+  height: 30rem;
+}
+
+.pause-screen {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 3rem;
+
+  color: whitesmoke;
+  background-color: rgba(32, 32, 32, 0.67);
+  padding: 2.5rem;
+  z-index: 100;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  font-size: 25px;
+}
+
+.box {
+  flex-shrink: 0;
+}
+
+.box__breakable {
+  background-image: url("./assets/images/breakable.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: lightgray;
+}
+
+.box__unbreakable {
+  background-image: url("./assets/images/unbreakable.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: lightgray;
+}
+
+.power-up {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+.power-up.speed {
+  background-image: url("assets/images/powerups/speed.png");
+}
+
+.power-up.bombRange {
+  background-image: url("assets/images/powerups/range.png");
+}
+
+.power-up.extraBomb {
+  background-image: url("assets/images/powerups/bomb.png");
+}
